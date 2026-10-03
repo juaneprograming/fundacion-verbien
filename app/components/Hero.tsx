@@ -17,21 +17,25 @@ export default function Hero() {
                 {/* Contenido */}
                 <Reveal className="relative z-10 max-w-2xl">
 
-                    <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#079DD9]/10 px-4 py-2">
+                   
+
+                    <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-[#252525] sm:text-6xl lg:text-7xl">
+                        Fundación{" "}
+                        
+                        <span className="relative inline-block text-[#079DD9]">
+                            VerBien
+                            <span className="absolute -bottom-2 left-0 h-1.5 w-2/3 rounded-full bg-[#F27B35]" />
+                            
+                        </span>
+                    </h1>
+
+                     <div className="mb-6 mt-6 inline-flex items-center gap-2 rounded-full bg-[#079DD9]/10 px-4 py-2">
                         <span className="h-2 w-2 rounded-full bg-[#F27B35]" />
 
                         <span className="text-sm font-medium text-[#079DD9]">
-                            Fundación VerBien
+                            La luz de tus ojos
                         </span>
                     </div>
-
-                    <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-[#252525] sm:text-6xl lg:text-7xl">
-                        La luz de{" "}
-                        <span className="relative inline-block text-[#079DD9]">
-                            tus ojos
-                            <span className="absolute -bottom-2 left-0 h-1.5 w-2/3 rounded-full bg-[#F27B35]" />
-                        </span>
-                    </h1>
 
                     <p className="mt-7 max-w-xl text-lg leading-8 text-[#4A4A4A] sm:text-xl">
                         Trabajamos para contribuir al bienestar y la salud visual,
