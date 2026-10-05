@@ -1,99 +1,76 @@
-import Reveal from "./Reveal";  
-
+import Reveal from "./Reveal";
 
 export default function Donate() {
     return (
         <section
             id="donar"
-            className="relative overflow-hidden bg-[#F2F2F2] py-24 lg:py-32"
+            className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-32"
         >
             {/* Decoraciones */}
-            <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-[#079DD9]/10 blur-3xl" />
+            <div className="pointer-events-none absolute -left-32 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-[#079DD9]/10 blur-3xl" />
 
             <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#F27B35]/10 blur-3xl" />
 
-            <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="relative mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+                <Reveal>
+                    <div className="relative overflow-hidden rounded-[2.5rem] bg-[#079DD9] px-6 py-14 text-center text-white shadow-2xl shadow-[#079DD9]/15 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+                        {/* Formas decorativas */}
+                        <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full border-[40px] border-white/10" />
 
-            <Reveal>
-                <div className="overflow-hidden rounded-[2.5rem] bg-[#079DD9] shadow-2xl shadow-[#079DD9]/20">
+                        <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full border-[40px] border-[#F27B35]/30" />
 
-                    <div className="grid items-center lg:grid-cols-[1.2fr_0.8fr]">
+                        <div className="relative mx-auto max-w-3xl">
+                            {/* Etiqueta */}
+                            <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+                                <span className="h-2 w-2 rounded-full bg-[#F27B35]" />
+                                Tu ayuda importa
+                            </span>
 
-                        {/* Contenido */}
-                        <div className="relative p-8 sm:p-12 lg:p-16">
+                            {/* Título */}
+                            <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+                                La luz también se{" "}
+                                <span className="text-[#F2A477]">comparte.</span>
+                            </h2>
 
-                            {/* Decoración */}
-                            <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/5" />
+                            {/* Texto */}
+                            <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+                                Con tu apoyo podemos seguir construyendo oportunidades y
+                                contribuyendo al bienestar y la salud visual de más personas.
+                            </p>
 
-                            <div className="relative">
-
-                                <div className="mb-6 inline-flex items-center gap-3">
-                                    <span className="h-1 w-10 rounded-full bg-[#F27B35]" />
-
-                                    <span className="text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
-                                        Sé parte del cambio
+                            {/* CTA */}
+                            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                                <a
+                                    href="#"
+                                    className="group inline-flex min-w-[190px] items-center justify-center gap-2 rounded-full bg-[#F27B35] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#e96d28] hover:shadow-xl"
+                                >
+                                    Quiero ayudar
+                                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                                        →
                                     </span>
-                                </div>
+                                </a>
 
-                                <h2 className="max-w-xl text-4xl font-bold leading-tight text-white sm:text-5xl">
-                                    Tu apoyo puede{" "}
-                                    <span className="text-[#F2A477]">
-                                        transformar una vida
-                                    </span>
-                                </h2>
-
-                                <p className="mt-6 max-w-xl text-base leading-8 text-white/85 sm:text-lg">
-                                    Cada aporte puede convertirse en una oportunidad para
-                                    quienes más lo necesitan. Juntos podemos contribuir a
-                                    construir un futuro con más posibilidades.
-                                </p>
-
-                                <div className="mt-9">
-                                    <a
-                                        href="#"
-                                        className="inline-flex items-center justify-center rounded-full bg-[#F27B35] px-8 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#e96d27] hover:shadow-xl"
-                                    >
-                                        Quiero donar
-                                    </a>
-                                </div>
-
-                                <p className="mt-4 text-xs text-white/60">
-                                    Próximamente encontrarás aquí las opciones disponibles
-                                    para realizar tu donación.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        {/* Bloque visual */}
-                        <div className="relative hidden min-h-[420px] items-center justify-center overflow-hidden bg-[#04B2D9] lg:flex">
-
-                            {/* Círculos */}
-                            <div className="absolute h-80 w-80 rounded-full border border-white/15" />
-
-                            <div className="absolute h-60 w-60 rounded-full border border-white/15" />
-
-                            <div className="absolute h-40 w-40 rounded-full border border-white/15" />
-
-                            {/* Corazón */}
-                            <div className="relative flex h-40 w-40 rotate-45 items-center justify-center rounded-[2.5rem] bg-white shadow-2xl">
-
-                                <span className="-rotate-45 text-7xl text-[#F27B35]">
-                                    ♥
-                                </span>
-
+                                <a
+                                    href="#nosotros"
+                                    className="inline-flex min-w-[190px] items-center justify-center rounded-full border border-white/30 bg-white/10 px-7 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/15"
+                                >
+                                    Conoce nuestra labor
+                                </a>
                             </div>
 
-                            {/* Puntos decorativos */}
-                            <span className="absolute right-16 top-20 h-4 w-4 rounded-full bg-[#F27B35]" />
+                            {/* Frase */}
+                            <div className="mt-10 flex items-center justify-center gap-4">
+                                <span className="h-px w-12 bg-white/20 sm:w-20" />
 
-                            <span className="absolute bottom-20 left-20 h-5 w-5 rounded-full bg-[#F2A477]" />
+                                <p className="text-sm font-medium italic text-white/60">
+                                    La luz de tus ojos
+                                </p>
 
+                                <span className="h-px w-12 bg-white/20 sm:w-20" />
+                            </div>
                         </div>
-
                     </div>
-                </div>
-            </Reveal>
+                </Reveal>
             </div>
         </section>
     );

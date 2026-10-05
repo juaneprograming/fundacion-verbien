@@ -5,21 +5,21 @@ export default function Hero() {
     return (
         <section
             id="inicio"
-            className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-white"
+            className="relative overflow-hidden bg-white pt-28 sm:pt-32 lg:pt-36"
         >
             {/* Decoración de fondo */}
             <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#04B2D9]/10 blur-3xl" />
 
             <div className="pointer-events-none absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-[#F2A477]/15 blur-3xl" />
 
-            <div className="mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:px-8 lg:py-20">
+            <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:px-10">
 
                 {/* Contenido */}
                 <Reveal className="relative z-10 max-w-2xl">
 
                    
 
-                    <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-[#252525] sm:text-6xl lg:text-7xl">
+                    <h1 className="max-w-xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
                         Fundación{" "}
                         
                         <span className="relative inline-block text-[#079DD9]">
@@ -37,13 +37,13 @@ export default function Hero() {
                         </span>
                     </div>
 
-                    <p className="mt-7 max-w-xl text-lg leading-8 text-[#4A4A4A] sm:text-xl">
+                    <p className="mt-7 max-w-xl text-base leading-7 text-[#4A4A4A] sm:text-lg sm:leading-8">
                         Trabajamos para contribuir al bienestar y la salud visual,
                         construyendo oportunidades para que más personas puedan
                         disfrutar de una mejor calidad de vida.
                     </p>
 
-                    <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
 
                         <a
                             href="#nosotros"

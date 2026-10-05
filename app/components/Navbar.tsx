@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const navItems = [
     { label: "Inicio", href: "#inicio" },
@@ -12,6 +13,14 @@ const navItems = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const phoneNumber = "573000000000";
+
+    const message = encodeURIComponent(
+        "Hola, quisiera conocer más información sobre la Fundación VerBien."
+    );
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (
         <header className="fixed top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
@@ -34,6 +43,16 @@ export default function Navbar() {
                             {item.label}
                         </a>
                     ))}
+
+                    <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm font-medium text-[#079DD9] transition-colors hover:text-[#04B2D9]"
+                    >
+                        <FaWhatsapp className="text-lg" />
+                        WhatsApp
+                    </a>
 
                     <a
                         href="#donar"
@@ -66,6 +85,17 @@ export default function Navbar() {
                                 {item.label}
                             </a>
                         ))}
+
+                        <a
+                            href={whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex w-full items-center justify-center gap-2 rounded-full border border-[#079DD9]/30 px-6 py-3 font-semibold text-[#079DD9] transition-colors hover:bg-[#079DD9]/5"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            <FaWhatsapp className="text-xl" />
+                            Escríbenos por WhatsApp
+                        </a>
 
                         <a
                             href="#donar"
