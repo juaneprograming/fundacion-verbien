@@ -63,9 +63,15 @@ export default function MissionVision() {
                                 </h3>
 
                                 <p className="mt-6 max-w-lg text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
-                                    Trabajamos para contribuir al bienestar y la salud visual,
-                                    desarrollando acciones que permitan generar oportunidades y
-                                    mejorar la calidad de vida de las personas.
+                                    Somos una fundación privada sin ánimo de lucro dirigida a la población
+                                    infantil vulnerable, con el objeto de asistirlos en el cuidado de la vista,
+                                    diagnóstico, prevención de enfermedades y asistencia quirúrgica para
+                                    corrección de anomalías visuales; para una mejor calidad de vida.
+                                    Acompañado de una educación integral para el niño y su familia que
+                                    procure su inclusión social de una forma productiva y con valores. Contamos
+                                    con profesionales con las competencias necesarias y con espíritu
+                                    humanitario, que garantizan una atención y asistencia de excelente calidad.
+
                                 </p>
 
                                 <div className="mt-10 h-px w-full bg-white/15" />
@@ -106,9 +112,11 @@ export default function MissionVision() {
                                 </h3>
 
                                 <p className="mt-6 max-w-lg text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
-                                    Buscamos consolidar una labor que genere un impacto positivo
-                                    y contribuya a que más personas puedan acceder a mejores
-                                    oportunidades para su bienestar y salud visual.
+                                    Ser en el 2030 una organización consolidada con una amplia cobertura
+                                    nacional que nos permita llegar a toda la población infantil de escasos
+                                    recursos, con servicios de excelente calidad que den respuesta a las
+                                    necesidades específicas de los usuarios, de manera oportuna y contribuir así,
+                                    a una mejor calidad de vida. 
                                 </p>
 
                                 <div className="mt-10 h-px w-full bg-white/15" />

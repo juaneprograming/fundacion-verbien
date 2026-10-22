@@ -1,6 +1,15 @@
 import Reveal from "./Reveal";
 
 export default function Donate() {
+
+    const phoneNumber = "573016668466";
+
+    const donationMessage = encodeURIComponent(
+        "Hola, quisiera conocer cómo puedo apoyar la labor social de la Fundación Ver Bien."
+    );
+
+    const donationUrl = `https://wa.me/${phoneNumber}?text=${donationMessage}`;
+
     return (
         <section
             id="donar"
@@ -41,7 +50,9 @@ export default function Donate() {
                             {/* CTA */}
                             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
                                 <a
-                                    href="#"
+                                    href={donationUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="group inline-flex min-w-[190px] items-center justify-center gap-2 rounded-full bg-[#F27B35] px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#e96d28] hover:shadow-xl"
                                 >
                                     Quiero ayudar

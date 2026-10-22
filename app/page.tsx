@@ -4,6 +4,7 @@ import About from "./components/About";
 import MissionVission from "./components/MissionVision";
 import Donate from "./components/Donate";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <About />
         <MissionVission />
+        <Services/>
         <Donate />
       </main>
       <Footer />
