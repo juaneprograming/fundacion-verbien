@@ -26,7 +26,7 @@ export default function Footer() {
                         <a href="#inicio" className="inline-block">
                             <div className="rounded-2xl bg-white px-5 py-4">
                                 <Image
-                                    src="/images/logo.png"
+                                    src="/images/gallery/logo_1.png"
                                     alt="Fundación VerBien"
                                     width={240}
                                     height={130}
