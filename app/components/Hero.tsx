@@ -17,19 +17,19 @@ export default function Hero() {
                 {/* Contenido */}
                 <Reveal className="relative z-10 max-w-2xl">
 
-                   
+
 
                     <h1 className="max-w-xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
                         Fundación{" "}
-                        
+
                         <span className="relative inline-block text-[#079DD9]">
                             VerBien
                             <span className="absolute -bottom-2 left-0 h-1.5 w-2/3 rounded-full bg-[#F27B35]" />
-                            
+
                         </span>
                     </h1>
 
-                     <div className="mb-6 mt-6 inline-flex items-center gap-2 rounded-full bg-[#079DD9]/10 px-4 py-2">
+                    <div className="mb-6 mt-6 inline-flex items-center gap-2 rounded-full bg-[#079DD9]/10 px-4 py-2">
                         <span className="h-2 w-2 rounded-full bg-[#F27B35]" />
 
                         <span className="text-sm font-medium text-[#079DD9]">
@@ -69,7 +69,7 @@ export default function Hero() {
                 </Reveal>
 
                 {/* Elemento visual */}
-                <Reveal className="relative flex items-center justify-center lg:justify-end">
+                <div className="relative flex items-center justify-center lg:justify-end">
 
                     {/* Círculos decorativos */}
                     <div className="absolute h-[320px] w-[320px] rounded-full border border-[#079DD9]/20 sm:h-[430px] sm:w-[430px]" />
@@ -88,7 +88,7 @@ export default function Hero() {
                         <div className="relative flex h-[250px] w-[250px] items-center justify-center rounded-full bg-white/95 p-10 shadow-xl sm:h-[320px] sm:w-[320px]">
 
                             <Image
-                                src="/images/Logo.png"
+                                src="/images/gallery/logo_1.png"
                                 alt="Fundación VerBien"
                                 width={300}
                                 height={160}
@@ -99,7 +99,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                </Reveal >
+                </div >
             </div>
 
             {/* Indicador inferior */}

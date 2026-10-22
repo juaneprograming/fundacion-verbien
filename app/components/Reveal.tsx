@@ -1,6 +1,7 @@
+
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 
 interface RevealProps {
@@ -16,11 +17,18 @@ export default function Reveal({
     direction = "up",
     className = "",
 }: RevealProps) {
+    const shouldReduceMotion = useReducedMotion();
+
     const offset = {
         up: { y: 35, x: 0 },
         left: { y: 0, x: -35 },
         right: { y: 0, x: 35 },
     };
+
+    // Respeta la preferencia del usuario por movimiento reducido.
+    if (shouldReduceMotion) {
+        return <div className={className}>{children}</div>;
+    }
 
     return (
         <motion.div
@@ -35,7 +43,7 @@ export default function Reveal({
             }}
             viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0.1,
             }}
             transition={{
                 duration: 0.7,
