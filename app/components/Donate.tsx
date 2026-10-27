@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 export default function Donate() {
 
-    const phoneNumber = "573016668466";
+    const phoneNumber = "573188681400";
 
     const donationMessage = encodeURIComponent(
         "Hola, quisiera conocer cómo puedo apoyar la labor social de la Fundación Ver Bien."

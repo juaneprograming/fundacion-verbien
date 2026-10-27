@@ -14,7 +14,7 @@ const navItems = [
     { label: "Servicios", href: "#servicios" },
 ];
 
-const phoneNumber = "573016668466";
+const phoneNumber = "573188681400";
 
 const message = encodeURIComponent(
     "Hola, quisiera conocer más información sobre la Fundación VerBien."

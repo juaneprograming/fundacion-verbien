@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -21,7 +20,7 @@ import {
 } from "lucide-react";
 import Reveal from "./Reveal";
 
-const PHONE_NUMBER = "573016668466";
+const PHONE_NUMBER = "573188681400";
 
 const services = [
     {
@@ -37,6 +36,7 @@ const services = [
             "Liderazgo empático e inteligencia emocional",
         ],
         icon: Brain,
+        image: "/images/gallery/capacitaciones.jpg",
         color: "#079DD9",
         tint: "#079DD9",
     },
@@ -53,6 +53,7 @@ const services = [
             "Resiliencia y desarrollo de fortalezas",
         ],
         icon: HandHeart,
+        image: "/images/gallery/jovenes.jpg",
         color: "#F27B35",
         tint: "#F27B35",
     },
@@ -69,6 +70,7 @@ const services = [
             "Dinámicas de comunicación grupal",
         ],
         icon: Users,
+        image: "/images/gallery/team-building.jpg",
         color: "#079DD9",
         tint: "#079DD9",
     },
@@ -85,6 +87,7 @@ const services = [
             "Logística y alimentación para jornadas",
         ],
         icon: Utensils,
+        image: "/images/gallery/gastronomicos.jpg",
         color: "#F27B35",
         tint: "#F27B35",
     },
@@ -101,6 +104,7 @@ const services = [
             "Regalos de Navidad e incentivos",
         ],
         icon: Gift,
+        image: "/images/gallery/regalos.jpg",
         color: "#079DD9",
         tint: "#079DD9",
     },
@@ -195,9 +199,19 @@ export default function Services() {
                             >
                                 {/* Acento superior */}
                                 <div
-                                    className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+                                    className="absolute inset-x-0 top-0 z-10 h-1 origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
                                     style={{ backgroundColor: service.color }}
                                 />
+
+                                {/* Imagen de referencia */}
+                                <div className="-mx-6 -mt-6 mb-6 aspect-[3/2] overflow-hidden bg-gray-100 sm:-mx-7 sm:-mt-7">
+                                    <img
+                                        src={service.image}
+                                        alt=""
+                                        loading="lazy"
+                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none"
+                                    />
+                                </div>
 
                                 <div className="flex items-start justify-between gap-3">
                                     <div
@@ -264,8 +278,8 @@ export default function Services() {
                                     <div
                                         id={`service-details-${service.number}`}
                                         className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${expanded
-                                                ? "grid-rows-[1fr] opacity-100"
-                                                : "grid-rows-[0fr] opacity-0"
+                                            ? "grid-rows-[1fr] opacity-100"
+                                            : "grid-rows-[0fr] opacity-0"
                                             }`}
                                     >
                                         <div className="overflow-hidden">
