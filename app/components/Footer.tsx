@@ -1,6 +1,11 @@
-
 import Image from "next/image";
-import { FaInstagram } from "react-icons/fa";
+import type { IconType } from "react-icons";
+import {
+    FaEnvelope,
+    FaInstagram,
+    FaMapMarkerAlt,
+    FaWhatsapp,
+} from "react-icons/fa";
 
 const footerLinks = [
     { label: "Inicio", href: "#inicio" },
@@ -11,21 +16,58 @@ const footerLinks = [
     { label: "Donaciones", href: "#donar" },
 ];
 
+const contactItems: {
+    icon: IconType;
+    label: string;
+    value: string;
+    href?: string;
+    external?: boolean;
+}[] = [
+        {
+            icon: FaEnvelope,
+            label: "Correo electrónico",
+            value: "fundaverbien@gmail.com",
+            href: "mailto:fundaverbien@gmail.com",
+        },
+        {
+            icon: FaWhatsapp,
+            label: "WhatsApp",
+            value: "+57 3188681400",
+            href: "https://wa.me/573188681400",
+            external: true,
+        },
+        {
+            icon: FaInstagram,
+            label: "Instagram",
+            value: "@fundaverbien",
+            href: "https://www.instagram.com/fundaverbien/",
+            external: true,
+        },
+        {
+            icon: FaMapMarkerAlt,
+            label: "Ubicación",
+            value: "Próximamente",
+        },
+    ];
+
+const headingClass =
+    "text-sm font-semibold uppercase tracking-[0.2em] text-[#F2A477]";
+
 export default function Footer() {
     return (
         <footer className="bg-[#252525] text-white">
             <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-                <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
+                <div className="grid items-start gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr] lg:gap-16">
                     {/* Marca */}
-                    <div className="max-w-sm">
+                    <div className="max-w-sm md:col-span-2 lg:col-span-1">
                         <a href="#inicio" className="inline-block">
-                            <div className="rounded-2xl bg-white px-5 py-4">
+                            <div className="rounded-2xl bg-white px-4 py-3">
                                 <Image
                                     src="/images/gallery/logo_1.png"
                                     alt="Fundación Ver Bien"
                                     width={240}
                                     height={130}
-                                    className="h-auto w-48 object-contain"
+                                    className="h-auto w-40 object-contain"
                                 />
                             </div>
                         </a>
@@ -35,27 +77,13 @@ export default function Footer() {
                             visual, generando oportunidades para quienes más
                             lo necesitan.
                         </p>
-
-                        <div className="mt-7 flex items-center gap-3">
-                            <a
-                                href="https://www.instagram.com/fundaverbien/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Instagram de Fundación Ver Bien"
-                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#F27B35]"
-                            >
-                                <FaInstagram size={17} />
-                            </a>
-                        </div>
                     </div>
 
                     {/* Navegación */}
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F2A477]">
-                            Navegación
-                        </h3>
+                        <h3 className={headingClass}>Navegación</h3>
 
-                        <ul className="mt-6 space-y-4">
+                        <ul className="mt-6 space-y-3.5">
                             {footerLinks.map((link) => (
                                 <li key={link.href}>
                                     <a
@@ -72,31 +100,63 @@ export default function Footer() {
 
                     {/* Contacto */}
                     <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F2A477]">
-                            Contacto
-                        </h3>
+                        <h3 className={headingClass}>Contacto</h3>
 
-                        <div className="mt-6 space-y-5 text-sm text-white/65">
-                            <div>
-                                <p className="mb-1 text-white">Correo electrónico</p>
-                                <a
-                                    href="mailto:fundaverbien@gmail.com"
-                                    className="transition-colors hover:text-white"
-                                >
-                                    fundaverbien@gmail.com
-                                </a>
-                            </div>
+                        <ul className="mt-6 space-y-4">
+                            {contactItems.map((item) => {
+                                const Icon = item.icon;
 
-                            <div>
-                                <p className="mb-1 text-white">WhatsApp</p>
-                                <p>+57 3188681400</p>
-                            </div>
+                                const content = (
+                                    <>
+                                        <span
+                                            className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-[#F27B35] ${item.href
+                                                    ? "transition-colors duration-300 group-hover:bg-[#F27B35] group-hover:text-white"
+                                                    : ""
+                                                }`}
+                                        >
+                                            <Icon size={16} aria-hidden="true" />
+                                        </span>
 
-                            <div>
-                                <p className="mb-1 text-white">Ubicación</p>
-                                <p>Próximamente</p>
-                            </div>
-                        </div>
+                                        <span className="min-w-0 text-sm leading-5">
+                                            <span className="block text-white">
+                                                {item.label}
+                                            </span>
+                                            <span
+                                                className={`block break-words text-white/65 ${item.href
+                                                        ? "transition-colors group-hover:text-white"
+                                                        : ""
+                                                    }`}
+                                            >
+                                                {item.value}
+                                            </span>
+                                        </span>
+                                    </>
+                                );
+
+                                return (
+                                    <li key={item.label}>
+                                        {item.href ? (
+                                            <a
+                                                href={item.href}
+                                                {...(item.external
+                                                    ? {
+                                                        target: "_blank",
+                                                        rel: "noopener noreferrer",
+                                                    }
+                                                    : {})}
+                                                className="group flex items-center gap-3.5"
+                                            >
+                                                {content}
+                                            </a>
+                                        ) : (
+                                            <div className="flex items-center gap-3.5">
+                                                {content}
+                                            </div>
+                                        )}
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </div>
                 </div>
 

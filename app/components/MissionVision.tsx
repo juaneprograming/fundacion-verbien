@@ -39,12 +39,12 @@ export default function MissionVision() {
 
                     {/* MISIÓN */}
                     <Reveal direction="left">
-                        <article className="group relative h-full overflow-hidden rounded-[2rem] bg-[#079DD9] p-8 text-white shadow-lg shadow-[#079DD9]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl sm:p-10 lg:p-12">
+                        <article className="group relative h-full overflow-hidden rounded-[2rem] bg-[#079DD9] p-8 text-white shadow-lg shadow-[#079DD9]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl sm:p-9 lg:p-10">
                             {/* Decoración */}
                             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10 transition-transform duration-700 group-hover:scale-125" />
 
                             <div className="relative">
-                                <div className="mb-8 flex items-center justify-between">
+                                <div className="mb-6 flex items-center justify-between">
                                     <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-xl font-bold backdrop-blur-sm">
                                         M
                                     </span>
@@ -63,18 +63,16 @@ export default function MissionVision() {
                                 </h3>
 
                                 <p className="mt-6 max-w-lg text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
-                                    Somos una fundación privada sin ánimo de lucro dirigida a la población
-                                    infantil vulnerable, con el objeto de asistirlos en el cuidado de la vista,
-                                    diagnóstico, prevención de enfermedades y asistencia quirúrgica para
-                                    corrección de anomalías visuales; para una mejor calidad de vida.
-                                    Acompañado de una educación integral para el niño y su familia que
-                                    procure su inclusión social de una forma productiva y con valores. Contamos
-                                    con profesionales con las competencias necesarias y con espíritu
-                                    humanitario, que garantizan una atención y asistencia de excelente calidad.
-
+                                    Somos una fundación sin ánimo de lucro que
+                                    cuida la salud visual de la niñez vulnerable:
+                                    diagnóstico, prevención y asistencia
+                                    quirúrgica, con un equipo profesional y
+                                    humanitario. Acompañamos al niño y su familia
+                                    con educación integral para una mejor calidad
+                                    de vida.
                                 </p>
 
-                                <div className="mt-10 h-px w-full bg-white/15" />
+                                <div className="mt-8 h-px w-full bg-white/15" />
 
                                 <p className="mt-5 text-sm text-white/65">
                                     Compromiso · Bienestar · Solidaridad
@@ -87,13 +85,13 @@ export default function MissionVision() {
                     <Reveal direction="right" delay={0.15}>
                         <article
                             id="vision"
-                            className="group relative h-full overflow-hidden rounded-[2rem] bg-[#F27B35] p-8 text-white shadow-lg shadow-[#F27B35]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl sm:p-10 lg:p-12"
+                            className="group relative h-full overflow-hidden rounded-[2rem] bg-[#F27B35] p-8 text-white shadow-lg shadow-[#F27B35]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl sm:p-9 lg:p-10"
                         >
                             {/* Decoración */}
                             <div className="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-white/10 transition-transform duration-700 group-hover:scale-125" />
 
                             <div className="relative">
-                                <div className="mb-8 flex items-center justify-between">
+                                <div className="mb-6 flex items-center justify-between">
                                     <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15 text-xl font-bold backdrop-blur-sm">
                                         V
                                     </span>
@@ -112,14 +110,14 @@ export default function MissionVision() {
                                 </h3>
 
                                 <p className="mt-6 max-w-lg text-sm leading-7 text-white/85 sm:text-base sm:leading-8">
-                                    Ser en el 2030 una organización consolidada con una amplia cobertura
-                                    nacional que nos permita llegar a toda la población infantil de escasos
-                                    recursos, con servicios de excelente calidad que den respuesta a las
-                                    necesidades específicas de los usuarios, de manera oportuna y contribuir así,
-                                    a una mejor calidad de vida. 
+                                    Ser en 2030 una organización consolidada, con
+                                    cobertura nacional, que llegue a toda la
+                                    población infantil de escasos recursos con
+                                    servicios oportunos y de excelente calidad,
+                                    contribuyendo a una mejor calidad de vida.
                                 </p>
 
-                                <div className="mt-10 h-px w-full bg-white/15" />
+                                <div className="mt-8 h-px w-full bg-white/15" />
 
                                 <p className="mt-5 text-sm text-white/65">
                                     Impacto · Oportunidades · Futuro
