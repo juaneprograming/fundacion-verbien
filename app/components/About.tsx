@@ -3,24 +3,29 @@ import GalleryItem from "./GalleryItem";
 
 const gallery = [
     {
-        src: "/images/gallery/img-1.jpeg",
+        src: "/images/gallery/1.jpeg",
         alt: "Actividades de la Fundación VerBien",
-        className: "",
+        className: "gallery-featured",
     },
     {
-        src: "/images/gallery/img-2.jpeg",
-        alt: "Labor social de la Fundación VerBien",
-        className: "",
+        src: "/images/gallery/2.jpeg",
+        alt: "Jornada comunitaria de la Fundación VerBien",
+        className: "gallery-top",
+    },
+    {
+        src: "/images/gallery/3.jpeg",
+        alt: "Actividades de bienestar comunitario",
+        className: "gallery-middle",
+    },
+    {
+        src: "/images/gallery/4.jpeg",
+        alt: "Acciones sociales de la Fundación VerBien",
+        className: "gallery-bottom-left",
     },
     {
         src: "/images/gallery/img-3.jpeg",
-        alt: "Jornada de salud visual",
-        className: "",
-    },
-    {
-        src: "/images/gallery/img-4.jpeg",
-        alt: "Comunidad y bienestar visual",
-        className: "",
+        alt: "Comunidad beneficiada por la Fundación VerBien",
+        className: "gallery-bottom-right",
     },
 ];
 
